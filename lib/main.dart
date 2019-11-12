@@ -13,35 +13,18 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-            child: IconButton(
-                icon: Icon(Icons.add_call),
-                onPressed: () {
-                  print("call me");
-                },
-              color: Colors.red,
-            ),
-//          child: RaisedButton.icon(
-//            onPressed: () {},
-//            icon:Icon(
-//              Icons.mail
-//            ),
-//            label: Text("mail me"),
-//            color: Colors.red,
-//          ),
-//        child: RaisedButton(
-//          onPressed: () {
-//            print("321茄子");
-//          },
-//          child: Text("拍照"),
-//          color: Colors.red,
-//        ),
-//        child: Icon(
-//          Icons.add_a_photo,
-//          color: Colors.red,
-//          size: 100.0,
-//        ),
+      body: Padding(
+        padding: EdgeInsets.all(60.0),
+        child: Text("Hello Padding"),
       ),
+//      Container(
+//        child: Text("Hello Flutter"),
+//        color: Colors.grey[400],
+//        margin: EdgeInsets.all(50.0),
+//        padding: EdgeInsets.symmetric(vertical:30.0,horizontal: 30.0),
+////        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+////        padding: EdgeInsets.all(90.0),
+//      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[600],
         child: Text("按钮3"),

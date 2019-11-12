@@ -14,16 +14,12 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Text(
-          "Hello Flutter",
-          style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.grey[600],
-              fontFamily: "IndieFlower"
-          ),
-        ),
+        //child: Image.asset("assets/image1.jpg"),
+        child: Image.network("https://images.pexels.com/photos/2658457/pexels-photo-2658457.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+        //child: Image(
+          //image:NetworkImage("https://images.pexels.com/photos/3178881/pexels-photo-3178881.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+          //image: AssetImage("assets/image3.jpg"),
+        //)
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[600],

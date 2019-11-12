@@ -13,18 +13,24 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Padding(
-        padding: EdgeInsets.all(60.0),
-        child: Text("Hello Padding"),
+      body: Row(
+        // 行内摆放: 横向摆放 纵向摆放
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text("Hello 米斯特吴"),
+          FlatButton(
+            onPressed: () {},
+            color:Colors.amber,
+            child: Text("按钮"),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text("这是container"),
+          )
+        ],
       ),
-//      Container(
-//        child: Text("Hello Flutter"),
-//        color: Colors.grey[400],
-//        margin: EdgeInsets.all(50.0),
-//        padding: EdgeInsets.symmetric(vertical:30.0,horizontal: 30.0),
-////        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
-////        padding: EdgeInsets.all(90.0),
-//      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[600],
         child: Text("按钮3"),

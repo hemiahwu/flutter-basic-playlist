@@ -14,12 +14,33 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        //child: Image.asset("assets/image1.jpg"),
-        child: Image.network("https://images.pexels.com/photos/2658457/pexels-photo-2658457.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-        //child: Image(
-          //image:NetworkImage("https://images.pexels.com/photos/3178881/pexels-photo-3178881.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-          //image: AssetImage("assets/image3.jpg"),
-        //)
+            child: IconButton(
+                icon: Icon(Icons.add_call),
+                onPressed: () {
+                  print("call me");
+                },
+              color: Colors.red,
+            ),
+//          child: RaisedButton.icon(
+//            onPressed: () {},
+//            icon:Icon(
+//              Icons.mail
+//            ),
+//            label: Text("mail me"),
+//            color: Colors.red,
+//          ),
+//        child: RaisedButton(
+//          onPressed: () {
+//            print("321茄子");
+//          },
+//          child: Text("拍照"),
+//          color: Colors.red,
+//        ),
+//        child: Icon(
+//          Icons.add_a_photo,
+//          color: Colors.red,
+//          size: 100.0,
+//        ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[600],

@@ -9,12 +9,24 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
+class Datas{
+  String text;
+  String author;
+
+  Datas({this.text,this.author});
+
+}
+
 class _HomeState extends State<Home> {
 
-  List<String> datas = [
-    "hello world",
-    "hello flutter",
-    "hello misterwu"
+
+
+
+
+  List<Datas> datas = [
+    Datas(text:"hello world",author:"米斯特吴"),
+    Datas(text:"hello flutter",author:"阿里巴巴"),
+    Datas(text:"hello missyou",author:"米修在线"),
   ];
 
   @override
@@ -32,7 +44,7 @@ class _HomeState extends State<Home> {
 //          return Text(data);
 //        }).toList()
 
-          children: datas.map((data) => Text(data)).toList()
+          children: datas.map((data) => Text('${data.author} : ${data.text}')).toList()
 //        children: <Widget>[
 //          Text("hello world"),
 //          Text("hello flutter"),

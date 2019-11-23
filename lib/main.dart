@@ -4,7 +4,13 @@ void main() => runApp(MaterialApp(
   home: Home(),
 ));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int level = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +19,15 @@ class Home extends StatelessWidget {
         title: Text("米修在线"),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            level += 1;
+          });
+        },
+        backgroundColor: Colors.grey[800],
+        child: Icon(Icons.add),
       ),
       body: Padding(
           padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
@@ -30,7 +45,7 @@ class Home extends StatelessWidget {
                 height: 60.0,
                 color: Colors.grey[800],
               ),
-              
+
               Text("姓名",style: TextStyle(
                 color:Colors.grey,
                 letterSpacing: 2.0
@@ -53,12 +68,12 @@ class Home extends StatelessWidget {
                   fontSize: 28.0
               )),
               SizedBox(height: 30.0),
-              Text("岗位",style: TextStyle(
+              Text("等级",style: TextStyle(
                   color:Colors.grey,
                   letterSpacing: 2.0
               )),
               SizedBox(height: 10.0),
-              Text("Node.js开发",style: TextStyle(
+              Text("$level",style: TextStyle(
                   color: Colors.amberAccent[200],
                   fontWeight: FontWeight.bold,
                   fontSize: 28.0
@@ -84,4 +99,7 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+
+
 

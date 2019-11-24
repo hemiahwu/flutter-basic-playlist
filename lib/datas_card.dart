@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'datas.dart';
 class DataCard extends StatelessWidget {
 
-  Datas data;
-
-  DataCard(this.data);
+  final Datas data;
+  final Function delete;
+  DataCard({this.data,this.delete});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +30,12 @@ class DataCard extends StatelessWidget {
                   color: Colors.grey[800]
               ),
             ),
+            SizedBox(height: 8.0),
+            FlatButton.icon(
+              onPressed: delete,
+              label: Text('删除'),
+              icon:Icon(Icons.delete)
+            )
           ],
         ),
       ),

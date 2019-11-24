@@ -31,7 +31,14 @@ class _HomeState extends State<Home> {
       ),
 
       body: Column(
-          children: datas.map((data) => DataCard(data)).toList()
+          children: datas.map((data) => DataCard(
+            data:data,
+            delete:(){
+                setState(() {
+                  datas.remove(data);
+                });
+              },
+          )).toList()
       ),
     );
   }

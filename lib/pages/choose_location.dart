@@ -9,17 +9,33 @@ class _ChooseLocationState extends State<ChooseLocation> {
 
   int counter = 0;
 
+  void getData() async {
+    String username = await Future.delayed(Duration(seconds: 3),() {
+      return "米斯特吴";
+    });
+
+    String bio = await Future.delayed(Duration(seconds: 2),() {
+      return "米修在线";
+    });
+
+    print("$username - $bio");
+  }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    print("initState function ran");
+    getData();
+
+    print("不会阻塞代码执行");
+
+//    print("initState function ran");
   }
 
   @override
   Widget build(BuildContext context) {
-    print("build function ran");
+//    print("build function ran");
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
@@ -43,6 +59,6 @@ class _ChooseLocationState extends State<ChooseLocation> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    print("dispose function ran");
+//    print("dispose function ran");
   }
 }

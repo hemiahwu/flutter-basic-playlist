@@ -9,29 +9,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
 
   int counter = 0;
 
-  void getData() async {
-    String username = await Future.delayed(Duration(seconds: 3),() {
-      return "米斯特吴";
-    });
 
-    String bio = await Future.delayed(Duration(seconds: 2),() {
-      return "米修在线";
-    });
-
-    print("$username - $bio");
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-
-    getData();
-
-    print("不会阻塞代码执行");
-
-//    print("initState function ran");
-  }
 
   @override
   Widget build(BuildContext context) {

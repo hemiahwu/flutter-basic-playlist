@@ -14,9 +14,10 @@ class _LoadingState extends State<Loading> {
     WorldTime instance = WorldTime(location: "北京",flag:"China.png",url: 'Asia/Shanghai');
     await instance.getData();
 
-    // 状态更新
-    setState(() {
-      time = instance.time;
+    Navigator.pushNamed(context, "/home", arguments: {
+      'location': instance.location,
+      'flag': instance.flag,
+      'time': instance.time
     });
   }
 
@@ -33,7 +34,7 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(50.0),
-        child: Text(time),
+        child: Text('loading'),
       ),
     );
   }

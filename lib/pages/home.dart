@@ -38,12 +38,12 @@ class _HomeState extends State<Home> {
                     },
                     icon: Icon(
                         Icons.edit_location,
-                        color:Colors.red[300]
+                        color: Colors.grey[300],
                     ),
                     label: Text(
                       'Edit Location',
                       style: TextStyle(
-                        color: Colors.red[300]
+                        color: Colors.grey[300],
                       ),
                     ),
                   ),
@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                           fontSize: 28.0,
                           letterSpacing: 2.0,
-                          color: Colors.deepOrangeAccent
+                          color: Colors.white,
                         ),
                       )
                     ],
@@ -65,8 +65,8 @@ class _HomeState extends State<Home> {
                   Text(
                     data['time'],
                     style: TextStyle(
-                      fontSize: 66.0,
-                      color: Colors.deepOrange
+                        fontSize: 66.0,
+                        color: Colors.white
                     ),
                   )
                 ],

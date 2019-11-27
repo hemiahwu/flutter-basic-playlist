@@ -18,6 +18,18 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldTime(url: 'America/New_York', location: '纽约', flag: 'usa.png'),
     WorldTime(url: 'Asia/Seoul', location: '首尔', flag: 'south_korea.png'),
   ];
+  
+  void updateTime(index) async {
+    WorldTime instance = locations[index];
+    await instance.getData();
+
+    Navigator.pop(context, {
+      'location': instance.location,
+      'flag': instance.flag,
+      'time': instance.time,
+      'isDaytime': instance.isDaytime
+    });
+  }
 
 
 
@@ -40,7 +52,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
             child: Card(
               child: ListTile(
                 onTap: (){
-                  print(locations[index].location);
+                  updateTime(index);
                 },
                 title: Text(locations[index].location),
                 leading: CircleAvatar(
